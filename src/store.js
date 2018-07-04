@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunkMiddleware from "redux-thunk";
-// import { fetchCircuits } from "./api";
+import { fetchCircuits } from "./api";
 
 export const initializeSession = ( ) => ( {
     type: "INITIALIZE_SESSION",
@@ -15,8 +15,8 @@ export const loadHome = () => ( {
     type: "LOAD_HOME",
 });
 
-// export const fetchData = ( ) => ( dispatch ) =>
-//     fetchCircuits( ).then( res => dispatch( storeData( res ) ) );
+export const fetchData = ( ) => ( dispatch ) =>
+    fetchCircuits( ).then( res => dispatch( storeData( res ) ) );
 
 const initialPageState = {
     title: "DEFAULT"

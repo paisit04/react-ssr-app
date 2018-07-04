@@ -3,6 +3,6 @@ require('url-loader');
 require('file-loader');
 require( "babel-register" )( {
     ignore: [ /(node_modules)/ ],
-    presets: [ "env", "react" ],
+    presets: [ "env", "react", 'react-app'],
 } );
 require("./server");
